@@ -1029,31 +1029,31 @@ orange.addEventListener('click',change_logo)
 // console.log(newStyles.title)
 const scroller = document.querySelector('.portfolio-projects')
 
-let press = false
-let startingX = 0
+let isDown = false;
+let startF;
+let scrollLeft;
 
-scroller.addEventListener('mousedown', function (e) {
-  press = true
-  startingX = e.clientX
-  this.style.cursor = 'grabbing'
-})
-
-scroller.addEventListener('mouseleave', function (e) {
-  press = false
-})
-
-window.addEventListener('mouseup', function (e) {
-  press = false
-  scroller.style.cursor = 'grab'
-})
-
-scroller.addEventListener('mousemove', function (e) {
-  if(!press) {
-    return
-  }
-
-  this.scrollLeft += startingX - e.clientX
-})
-
+scroller.addEventListener('mousedown', (e) => {
+  isDown = true;
+  scroller.classList.add('active');
+  startF = e.pageX - scroller.offsetLeft;
+  scrollLeft = scroller.scrollLeft;
+});
+scroller.addEventListener('mouseleave', () => {
+  isDown = false;
+  scroller.classList.remove('active');
+});
+scroller.addEventListener('mouseup', () => {
+  isDown = false;
+  scroller.classList.remove('active');
+});
+scroller.addEventListener('mousemove', (e) => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - scroller.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  scroller.scrollLeft = scrollLeft - walk;
+  console.log(walk);
+});
 
 
