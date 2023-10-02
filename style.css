@@ -1100,14 +1100,12 @@ font-weight: 500;
         -khtml-user-select: none;
         -webkit-user-select: none;
         user-select: none;
-        pointer-events: none;
     }
     .portfolio-projects div{
         -moz-user-select: none;
         -khtml-user-select: none;
         -webkit-user-select: none;
         user-select: none;
-        pointer-events: none;
     }
     .my-blog{
         padding-left: 40px;
@@ -1197,14 +1195,12 @@ font-weight: 500;
         -khtml-user-select: none;
         -webkit-user-select: none;
         user-select: none;
-        pointer-events: none;
     }
     .portfolio-projects div{
         -moz-user-select: none;
         -khtml-user-select: none;
         -webkit-user-select: none;
         user-select: none;
-        pointer-events: none;
     }
     .my-blog{
         padding-left: 40px;
