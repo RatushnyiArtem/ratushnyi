@@ -1566,5 +1566,42 @@ font-weight: 500;
         width: 250px;
         margin: 0 auto;
     }
-
+}
+@media screen and (max-width: 390px) {
+    .header_menu{
+        width: 100%;
+    }
+    .page{
+        min-width: 100%;
+    }
+    .menu-splash{
+        width: 420px;
+    }
+    .second-button-splash{
+        width: 200px;
+    }
+    .color-splash{
+        width: 40px;
+        height: 40px;
+    }
+    .color-splash img{
+        width: 25px;
+        height: 25px;
+    }
+    .header-logo{
+        width: 100%;
+        padding-right: 20px;
+    }
+    .form-wrapper .form-input input{
+        width: 100%;
+    }
+    .form-input{
+        width: calc(100% - 30px);
+    }
+    .form-input .subject{
+        width: 100%;
+    }
+    .form-input textarea{
+        width: 100%;
+    }
 }
