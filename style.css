@@ -486,11 +486,7 @@ color: #A7A5A3;
     /* cursor: alias; */
     cursor: grab;
     scroll-behavior: smooth;
-    scrollbar-width: none;
     margin-bottom: 40px;
-}
-.blog-slider::-webkit-scrollbar { 
-    display: none;
 }
 .slide{
     width: 444px;
@@ -1083,12 +1079,8 @@ font-weight: 500;
         cursor: grab;
         overflow-x: auto;
         scroll-behavior: smooth;
-        scrollbar-width: none;
         position: relative;
         height: 333px;
-    }
-    .portfolio-projects::-webkit-scrollbar { 
-        display: none;
     }
     .portfolio-projects div{
         scroll-snap-align: start;
@@ -1178,12 +1170,8 @@ font-weight: 500;
         cursor: grab;
         overflow-x: auto;
         scroll-behavior: smooth;
-        scrollbar-width: none;
         position: relative;
         height: 333px;
-    }
-    .portfolio-projects::-webkit-scrollbar { 
-        display: none;
     }
     .portfolio-projects div{
         scroll-snap-align: start;

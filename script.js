@@ -9,6 +9,33 @@ $(document).ready(function (){
         $("#mySphere");
     }
 })
+const wrapper = document.querySelector('.blog-slider')
+
+let pressed = false
+let startX = 0
+
+wrapper.addEventListener('mousedown', function (e) {
+  pressed = true
+  startX = e.clientX
+  this.style.cursor = 'grabbing'
+})
+
+wrapper.addEventListener('mouseleave', function (e) {
+  pressed = false
+})
+
+window.addEventListener('mouseup', function (e) {
+  pressed = false
+  wrapper.style.cursor = 'grab'
+})
+
+wrapper.addEventListener('mousemove', function (e) {
+  if(!pressed) {
+    return
+  }
+
+  this.scrollLeft += startX - e.clientX
+})
 let setting = document.getElementById('setting')
 let splash = document.querySelector('.menu-splash')
 let body = document.querySelector('body')
@@ -1000,5 +1027,33 @@ orange.addEventListener('click',change_logo)
 // }
 // let newStyles = [document.querySelectorAll('.alternative-style')]
 // console.log(newStyles.title)
+const scroller = document.querySelector('.portfolio-projects')
+
+let press = false
+let startingX = 0
+
+scroller.addEventListener('mousedown', function (e) {
+  press = true
+  startingX = e.clientX
+  this.style.cursor = 'grabbing'
+})
+
+scroller.addEventListener('mouseleave', function (e) {
+  press = false
+})
+
+window.addEventListener('mouseup', function (e) {
+  press = false
+  scroller.style.cursor = 'grab'
+})
+
+scroller.addEventListener('mousemove', function (e) {
+  if(!press) {
+    return
+  }
+
+  this.scrollLeft += startingX - e.clientX
+})
+
 
 
