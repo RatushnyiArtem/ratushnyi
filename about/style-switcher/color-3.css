@@ -1,0 +1,195 @@
+#colority-change{
+    color: #915CEB
+}
+.btn-work a .buttn{
+    width: 100%;
+    max-width: 250px;
+    height: 78px;
+    border: 1px solid #915CEB;
+    border-radius: 0px 10px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+.text_but{
+    font-family: 'Sarpanch';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #915CEB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    transition: all .3s ease-in-out;
+    
+}
+.buttn .bg{
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: -13px;
+    top: 0;
+    transition: all .3s ease-in-out;
+    transform: skewX(-19deg);
+    background-color: #915CEB;
+    z-index: 1;
+}
+.buttn:hover span.bg{
+    width: 114%;
+}
+.buttn:hover span.text_but{
+    color: #333333;
+}
+.my-contact .social-block .social-send a .btn-social{
+    width: 100%;
+    /* max-width: 450px; */
+    height: 78px;
+    border: 1px solid #915CEB;
+    border-radius: 0px 10px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    max-width: 279px;
+    margin: 0 auto;
+}
+.my-contact .social-block1 .social-send a .btn-social{
+    width: 100%;
+    /* max-width: 450px; */
+    height: 78px;
+    border: 1px solid #915CEB;
+    border-radius: 0px 10px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    max-width: 279px;
+    margin: 0 auto;
+}
+.my-contact .social-block2 .social-send a .btn-social{
+    width: 100%;
+    /* max-width: 450px; */
+    height: 78px;
+    border: 1px solid #915CEB;
+    border-radius: 0px 10px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    max-width: 279px;
+    margin: 0 auto;
+}
+.btn-social .backgr{
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: -13px;
+    top: 0;
+    transition: all .3s ease-in-out;
+    transform: skewX(-19deg);
+    background-color: #915CEB;
+    z-index: 1;
+}
+.btn-social:hover span.backgr{
+    width: 114%;
+}
+.btn-social:hover span.text_more{
+    color: #333333;
+}
+.contact-form form button .btn-contact{
+    width: 100%;
+    /* max-width: 450px; */
+    height: 78px;
+    border: 1px solid #915CEB;
+    border-radius: 0px 10px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    max-width: 279px;
+    margin: 0 auto;
+}
+.btn-contact .backgr{
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: -13px;
+    top: 0;
+    transition: all .3s ease-in-out;
+    transform: skewX(-19deg);
+    background-color: #915CEB;
+    z-index: 1;
+}
+.btn-contact:hover span.backgr{
+    width: 114%;
+}
+.btn-contact:hover span.text_more{
+    color: #333333;
+}
+span.text_more{
+    color: #915CEB;
+}
+.text-portfolio .portfolio-more a .pinner{
+    width: 100%;
+    /* max-width: 450px; */
+    height: 78px;
+    border: 1px solid #915CEB;
+    border-radius: 0px 10px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+.pinner .backgr{
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: -13px;
+    top: 0;
+    transition: all .3s ease-in-out;
+    transform: skewX(-19deg);
+    background-color: #915CEB;
+    z-index: 1;
+}
+.pinner:hover span.backgr{
+    width: 114%;
+}
+.pinner:hover span.text_more{
+    color: #333333;
+}
+.slide{
+    border-top: 2px solid #915CEB;
+}
+#violet-splash{
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 2px solid rgb(252, 252, 252);
+        transition: all .5s;
+        animation: clippath 2s infinite linear;
+        border-radius: 15px;
+
+    }
+}
+
+@keyframes clippath {
+    0%,
+    100% {
+        clip-path: inset(0 0 80% 0);
+    }
+    
+    25% {
+        clip-path: inset(0 80% 0 0);
+    }
+    50% {
+        clip-path: inset(80% 0 0 0);
+    }
+    75% {
+        clip-path: inset(0 0 0 80%);
+    }
+}
+
+
