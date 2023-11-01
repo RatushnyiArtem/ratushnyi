@@ -26,7 +26,7 @@ body{
 .header_menu{
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 8;
     left: 0;
     width: 230px;
     background-color: #181818;
@@ -617,6 +617,45 @@ color: #A7A5A3;
 .social-block .social-type{
     margin-bottom: 34px;
 }
+.social-blocker{
+    width: 400px;
+    height: 300px;
+    background: #232222;
+    border-radius: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    padding-top: 25px;
+    box-shadow: 0px 0px 3px rgba(171, 169, 169, 0.37);
+}
+.social-blocker .social-type{
+    margin-bottom: 34px;
+}
+.social-blocker1{
+    width: 400px;
+    height: 300px;
+    background: #232222;
+    border-radius: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    padding-top: 25px;
+    box-shadow: 0px 0px 3px rgba(171, 169, 169, 0.37);
+}
+.social-blocker1 .social-type{
+    margin-bottom: 34px;
+}
+.social-blocker2{
+    width: 400px;
+    height: 300px;
+    background: #232222;
+    border-radius: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    padding-top: 25px;
+    box-shadow: 0px 0px 3px rgba(171, 169, 169, 0.37);
+}
+.social-blocker2 .social-type{
+    margin-bottom: 34px;
+}
 .social-block2 .social-type{
     margin-bottom: 34px;
 }
@@ -1043,6 +1082,222 @@ font-weight: 500;
 .dark_logo{
     display: none;
 }
+.m-message{
+    position: fixed;
+    z-index: 17;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: #00000062;
+    visibility: hidden;
+}
+.m-message .m-message-body .social-blocker .social-send a .btn-social{
+    width: 100%;
+    /* max-width: 450px; */
+    height: 78px;
+    border: 1px solid white;
+    border-radius: 0px 10px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    max-width: 279px;
+    margin: 0 auto;
+}
+.m-message .m-message-body .social-blocker1 .social-send a .btn-social{
+    width: 100%;
+    /* max-width: 450px; */
+    height: 78px;
+    border: 1px solid white;
+    border-radius: 0px 10px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    max-width: 279px;
+    margin: 0 auto;
+}
+.m-message .m-message-body .social-blocker2 .social-send a .btn-social{
+    width: 100%;
+    /* max-width: 450px; */
+    height: 78px;
+    border: 1px solid white;
+    border-radius: 0px 10px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    max-width: 279px;
+    margin: 0 auto;
+}
+.m-message-body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.m-message .m-message-body .social-blocker{
+    position: absolute;
+    visibility: hidden;
+    transition: all .8s ease 0s;
+    transform: perspective(600px) translate(0,-100%) rotateX(45deg);
+    opacity: 0;
+}
+.m-message .m-message-body .social-blocker1{
+    position: absolute;
+    visibility: hidden;
+    transition: all .8s ease 0s;
+    transform: perspective(600px) translate(0,-100%) rotateX(45deg);
+    opacity: 0;
+}
+.m-message .m-message-body .social-blocker2{
+    position: absolute;
+    visibility: hidden;
+    transition: all .8s ease 0s;
+    transform: perspective(600px) translate(0,-100%) rotateX(45deg);
+    opacity: 0;
+}
+.m-message .m-message-body .social-close-message{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.m-message .m-message-body .social-close-message i{
+    font-size: 22px;
+    color: white;
+}
+.m-message .m-message-body .social-blocker{
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* border: 2px solid rgb(252, 252, 252); */
+            transition: all .6s;
+            /* animation: clippath 3s infinite linear; */
+            border-radius: 15px;
+    
+        }
+}
+.m-message .m-message-body .social-blocker1{
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* border: 2px solid rgb(252, 252, 252); */
+        transition: all .6s;
+        /* animation: clippath 3s infinite linear; */
+        border-radius: 15px;
+
+    }
+}
+.m-message .m-message-body .social-blocker2{
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* border: 2px solid rgb(252, 252, 252); */
+        transition: all .6s;
+        /* animation: clippath 3s infinite linear; */
+        border-radius: 15px;
+
+    }
+}
+.m-message .m-message-body .social-blocker:hover{
+    cursor: pointer;
+}
+.m-message .m-message-body .social-blocker1:hover{
+    cursor: pointer;
+}
+.m-message .m-message-body .social-blocker2:hover{
+    cursor: pointer;
+}
+.m-message .m-message-body .social-blocker:hover::before{
+    border: 2px solid white;
+    animation: clippath 3s infinite linear;
+}
+.m-message .m-message-body .social-blocker1:hover::before{
+    border: 2px solid white;
+    animation: clippath 3s infinite linear;
+}
+.m-message .m-message-body .social-blocker2:hover::before{
+    border: 2px solid white;
+    animation: clippath 3s infinite linear;
+}
+    @keyframes clippath {
+        0%,
+        100% {
+            clip-path: inset(0 0 90% 0);
+        }
+        
+        25% {
+            clip-path: inset(0 90% 0 0);
+        }
+        50% {
+            clip-path: inset(90% 0 0 0);
+        }
+        75% {
+            clip-path: inset(0 0 0 90%);
+        }
+    }
+    .social-blocker .text_more {
+        color: white;
+        font-family: 'Sarpanch';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+        transition: all .3s ease-in-out;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .social-blocker1 .text_more {
+        color: white;
+        font-family: 'Sarpanch';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+        transition: all .3s ease-in-out;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .social-blocker2 .text_more {
+        color: white;
+        font-family: 'Sarpanch';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+        transition: all .3s ease-in-out;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
 @media screen and (max-width:1800px) {
     .page{
         min-width: 1470px;
@@ -1327,9 +1582,6 @@ font-weight: 500;
         width: 100%;
         padding-right: 0;
     }
-    .header_menu{
-        z-index: 10;
-    }
     .social-block{
         width: 340px;
     }
@@ -1393,12 +1645,17 @@ font-weight: 500;
 .portfolio-more{
     padding-right: 0;
 }
+.measure-message .text_more{
+    font-size: 22px;
+}
+.measure-message h2{
+    margin-bottom: 30px;
+}
 .pinner .text_more{
     font-family: 'Sarpanch';
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
-    color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1414,7 +1671,6 @@ font-weight: 500;
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
-    color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1459,7 +1715,15 @@ font-weight: 500;
     .social-block2 .social-type{
         margin-bottom: 10px;
     }
-
+    .social-blocker .social-dop-text{
+        display: block;
+    }
+    .social-blocker1 .social-dop-text{
+        display: block;
+    }
+    .social-blocker2 .social-dop-text{
+        display: block;
+    }
     .social-dop-text{
         display: none;
     }
@@ -1495,7 +1759,6 @@ font-weight: 500;
         font-style: normal;
         font-weight: 600;
         font-size: 22px;
-        color: #FFFFFF;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1745,7 +2008,29 @@ font-weight: 500;
     .portfolio-more p{
         width: 100%;
     }
-
+    .m-message.open{
+        visibility: visible;
+    }
+    .m-message.email .m-message-body .social-blocker{
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+    }
+    .m-message.telegram .m-message-body .social-blocker1{
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+    }
+    .m-message.instagram .m-message-body .social-blocker2{
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+    }
+}
+@media screen and (max-width: 750px) {
+    .main-text h1{
+        font-size: 48px;
+    }
 }
 @media screen and (max-width:680px) {
     .main-text h1{
@@ -1785,6 +2070,9 @@ font-weight: 500;
     }
 }
 @media screen and (max-width: 555px) {
+    .measure-message{
+        left: calc(50% - 200px);
+    }
     .text-portfolio h1{
         font-size: 40px;
     }
@@ -2283,6 +2571,18 @@ font-weight: 500;
         width: 250px;
         margin: 0 auto;
     }
+    .social-blocker{
+        width: 380px;
+        height: 300px;
+    }
+    .social-blocker1{
+        width: 380px;
+        height: 300px;
+    }
+    .social-blocker2{
+        width: 380px;
+        height: 300px;
+    }
 }
 @media screen and (max-width: 390px) {
     .header_menu{
@@ -2320,5 +2620,17 @@ font-weight: 500;
     }
     .form-input textarea{
         width: 100%;
+    }
+    .social-blocker{
+        width: 310px;
+        height: 300px;
+    }
+    .social-blocker1{
+        width: 310px;
+        height: 300px;
+    }
+    .social-blocker2{
+        width: 310px;
+        height: 300px;
     }
 }

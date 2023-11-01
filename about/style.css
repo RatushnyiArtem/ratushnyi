@@ -564,68 +564,6 @@ font-weight: 500;
     .setting{
         bottom: 100px;
     }
-    .portfolio-projects{
-        width: 1200px;
-        overflow-x: hidden;
-        user-select: none;
-        touch-action: pan-y;
-        margin: 0 auto;
-        scroll-snap-type: x;
-        cursor: grab;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        position: relative;
-        height: 333px;
-    }
-    .portfolio-projects div{
-        scroll-snap-align: start;
-        min-width: 333.8px;
-        width: 333.8px;
-    }
-    .portfolio-projects div img{
-        -moz-user-select: none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
-        user-select: none;
-    }
-    .portfolio-projects div{
-        -moz-user-select: none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
-        user-select: none;
-    }
-    .my-blog{
-        padding-left: 40px;
-    } 
-    .my-contact{
-        padding-left: 30px;
-    }  
-    .form-wrapper{
-        flex-direction: column;
-    } 
-    .form-input{
-        width: 700px;
-        margin: 0 auto 32px;
-    }
-    .form-wrapper .form-input input{
-        width: 700px;
-    }
-    .form-input .subject{
-        width: 700px;
-    }
-    .form-input textarea{
-        width: 700px;
-    }
-    .contact-form form{
-        width: 810px;
-    }
-    .button-propose{
-        padding-right: 50px;
-    }
-    .form-input span{
-        width: 700px;
-    }
-
 }
 
 @media screen and (max-width:1470px) {
@@ -655,68 +593,6 @@ font-weight: 500;
     .setting{
         bottom: 100px;
     }
-    .portfolio-projects{
-        width: 1200px;
-        overflow-x: hidden;
-        user-select: none;
-        touch-action: pan-y;
-        margin: 0 auto;
-        scroll-snap-type: x;
-        cursor: grab;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        position: relative;
-        height: 333px;
-    }
-    .portfolio-projects div{
-        scroll-snap-align: start;
-        min-width: 333.8px;
-        width: 333.8px;
-    }
-    .portfolio-projects div img{
-        -moz-user-select: none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
-        user-select: none;
-    }
-    .portfolio-projects div{
-        -moz-user-select: none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
-        user-select: none;
-    }
-    .my-blog{
-        padding-left: 40px;
-    } 
-    .my-contact{
-        padding-left: 30px;
-    }  
-    .form-wrapper{
-        flex-direction: column;
-    } 
-    .form-input{
-        width: 700px;
-        margin: 0 auto 32px;
-    }
-    .form-wrapper .form-input input{
-        width: 700px;
-    }
-    .form-input .subject{
-        width: 700px;
-    }
-    .form-input textarea{
-        width: 700px;
-    }
-    .contact-form form{
-        width: 810px;
-    }
-    .button-propose{
-        padding-right: 50px;
-    }
-    .form-input span{
-        width: 700px;
-    }
-
 }
 @media screen and (max-width: 1300px) {
     .header-intro{
@@ -743,21 +619,222 @@ font-weight: 500;
     .dop-work p{
         font-size: 27px;
     }
-    .portfolio-more{
-        padding-right: 60px;
+}
+@media screen and (max-width: 1200px) {
+    .page{
+        min-width: 0px;
     }
-    .portfolio-more p {
+    .setting{
+        right: 0;
+    }
+    .dop-work p{
         font-size: 22px;
-        width: 500px;
     }
-    .portfolio-projects{
-        width: calc(100% - 60px);
+    .main-text h1{
+        font-size: 50px;
+    }
+    .main-text h1 img{
+        height: 60px;
+    }
+}
+@media screen and (max-width:1100px) {
+    .header_info{
+        width: 100%;
+        padding-right: 0;
+    }
+}
+@media screen and (max-width:1020px){
+    .header-info{
+        padding-left: 30px;
+    }
+    .text_more{
+        font-size: 15px;
+        padding-left: 0px;
+        padding-right: 0px;    
+    }
+}
+@media screen and (max-width: 950px) {
+    .main-text h1 {
+        font-size: 40px;
+    }
+    .dop-work{
+        margin-bottom: 40px;
+    }
+    header{
+        margin-bottom: 50px;
+    }
+    .header_info{
+        padding-left: 30px;
+    }
+    .main-text h1{
+        font-size: 60px;
+    }
+    .header-intro{
+        display: none;
+    }
+    .header_info{
+        display: block;
+        padding-left: 90px;
+    }
+    .main-text{
+        padding-top: 200px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .main-text h1{
+        font-size: 48px;
+    }
+}
+@media screen and (max-width:680px) {
+    .main-text h1{
+        font-size: 44px;
+    }
+    .setting{
+        bottom: 200px;
+    }
+    .header_info{
+        padding-left: 40px;
+    }
+    .menu-splash{
+        width: 107%;
+    }
+    
+}
+@media screen and (max-width: 620px) {
+    .main-text h1{
+        font-size: 40px;
+    }
+}
+@media screen and (max-width:571px) {
+    .main-text h1{
+        font-size: 36px;
+    }
+    .dop-work p{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 555px) {
+    .header_info{
+        padding-left: 23px;
+    }
+    .main-text h1 img {
+        height: 50px;
+    }
+}
+@media screen and (max-width: 535px) {
+    .main-text h1{
+        font-size: 34px;
+    }
+    .dop-work p{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 517px) {
+    .page{
+        display: block;
+        padding-left: 0;
+        overflow: hidden;
+        
+    }
+    .header_menu{
+        width: 100%;
+        height: 170px;
+    }
+    .header-logo{
+        height: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 40px;
+        position: relative;
+        z-index: 99999;
+    }
+    .header-logo img{
+        height: 100px;
+        width: 117px;
+        background: none;
+    }
+    .header-logo h1{
+        font-family: 'VIBER-SANS';
+        font-size: 58px;
+    }
+    .header_menu{
+        z-index: 11;
+
+    }
+    .header-social{
+        display: none; 
+    }
+    .header-links div a:nth-child(2){
+        display: none;
+    }
+    .header-links{
+        height: 400px;
+        width: 50px;
+        z-index: 8;
+        margin-bottom: 0;
+        padding-left: 0;
+        position: absolute;
+        right: 15px;
+    }
+    .header-links div a{
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        background-color: #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header-dop-menu{
+        position: fixed;
+        right: 0;
+        height: 400px;
+        width: 100px;
+        z-index: 8 ;
+        padding-top: 40px;
+    }
+    .setting{
+        z-index: 10;
+        position: absolute;
+        right: 20px;
+        bottom: 200px;
+    }
+    .buttn{
+        position: relative;
+        z-index: 5;
+    }
+    .header-intro{
+        display: none;
+    }
+    .main-text{
+        padding-top: 220px;
+    }
+    .main-text h1{
+        font-size: 48px;
+    }
+    .main-text h1 img{
+        height: 50px;
+    }
+    .dop-work p{
+        font-size: 20px;
+    }
+    .header_info{
+        padding-left: 35px;
+    }
+    .menu-splash{
+        z-index: 15;
+    }
+    header{
+        margin-bottom: 0px;
     }
 }
 
 /* iphone users */
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 431px) {
     .page{
         min-width: 430px;
         display: block;
@@ -827,7 +904,9 @@ font-weight: 500;
     }
     .setting{
         z-index: 10;
-        bottom: 250px;
+        position: absolute;
+        right: 20px;
+        bottom: 200px;
     }
     .buttn{
         position: relative;
@@ -855,199 +934,8 @@ font-weight: 500;
         width: 460px;
         z-index: 15;
     }
-    .back-text{
-        top: 30px;
-    }
-    .back-text h1{
-        font-size: 120px;
-        letter-spacing: 10px;
-    }
     header{
         margin-bottom: 0px;
-    }
-    .text-portfolio{
-        padding-left: 35px;
-    }
-    .text-portfolio h1{
-        font-size: 50px;
-        margin-bottom: 0;
-    }
-    .portfolio-more{
-        flex-direction: column;
-        padding-right: 35px;
-        align-items: flex-start;
-    }
-    .portfolio-more p{
-        width: 100%;
-        margin-bottom: 30px;
-        font-size: 18px;
-    }
-    .portfolio-projects{
-        width: 100%;
-    }
-    .dop-work{
-        margin-bottom: 30px;
-    }
-    .my-skills-text{
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .my-skills-text h1{
-        font-size: 50px;
-    }
-    .my-skills{
-        flex-direction: column;
-        padding-left: 35px;
-        margin-bottom: 80px;
-
-    }
-    canvas{
-        width: 400px;
-    }
-    .my-skills-text p{
-        font-size: 18px;
-    }
-    .my-blog{
-        padding-left: 0;
-        padding-top: 130px;
-    }
-    .my-blog .blog-slider div:nth-child(6){
-        margin-right: 0;
-    }
-    .my-blog .blog-pattern h1{
-        font-size: 140px;
-    }
-    .my-blog .blog-pattern{
-        left: 0;
-    }
-    .my-contact{
-        position: relative;
-        flex-direction: column-reverse;
-    }
-    .contact-form form{
-        width: 100%;
-        padding-left: 15px;
-    }
-    .form-input{
-        width: 400px;
-        margin: 0 0px 32px;
-    }
-    .form-wrapper .form-input input{
-        width: 400px;
-    }
-    .my-contact{
-        padding-left: 00px;
-    }
-    .form-input .subject{
-        width: 400px;
-    }
-    .form-input textarea{
-        width: 400px;
-    }
-    .button-propose{
-        width: 100%;
-        padding-right: 0;
-    }
-    .button-propose button{
-        margin: 0 auto 80px auto;
-        display: block;
-        float: none;
-    }
-    .social-block div:nth-child(2){
-        display: none;
-    }
-    .social-block div:nth-child(3){
-        display: none;
-    }
-    .social-block div:nth-child(4){
-        display: none;
-    }
-    .social-block1 div:nth-child(2){
-        display: none;
-    }
-    .social-block1 div:nth-child(3){
-        display: none;
-    }
-    .social-block1 div:nth-child(4){
-        display: none;
-    }
-    .social-block2 div:nth-child(2){
-        display: none;
-    }
-    .social-block2 div:nth-child(3){
-        display: none;
-    }
-    .social-block2 div:nth-child(4){
-        display: none;
-    }
-    .social-block{
-        height: 45px;
-        width: 45px;
-        border-radius: 50%;
-        padding-top: 0;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        cursor: pointer;
-    }
-    .social-block i{
-        font-size: 21px;
-    }
-    .social-block .social-type{
-        margin-bottom: 0;
-    }
-    .social-block1{
-        height: 45px;
-        width: 45px;
-        border-radius: 50%;
-        padding-top: 0;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        cursor: pointer;
-    }
-    .social-block1 i{
-        font-size: 21px;
-    }
-    .social-block1 .social-type{
-        margin-bottom: 0;
-    }
-    .social-block1 .social-type{
-        width: auto;
-        height: auto;
-        margin-right: 0px;
-        margin-left: 0px;
-
-    }
-    .social-block2{
-        height: 45px;
-        width: 45px;
-        border-radius: 50%;
-        padding-top: 0;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-    }
-    .social-block2 i{
-        font-size: 21px;
-    }
-    .social-block2 .social-type{
-        margin-bottom: 0;
-    }
-    .social-block{
-        margin: 0 auto 20px auto;
-    }
-    .social-block1{
-        margin: 0 auto 20px auto;
-    }
-    .social-block2{
-        margin: 0 auto;
-        cursor: pointer;
-    }
-    .social-flexable{
-        display: flex;
-        width: 250px;
-        margin: 0 auto;
     }
 }
 @media screen and (max-width: 390px) {
@@ -1075,17 +963,4 @@ font-weight: 500;
         width: 100%;
         padding-right: 20px;
     }
-    .form-wrapper .form-input input{
-        width: 100%;
-    }
-    .form-input{
-        width: calc(100% - 30px);
-    }
-    .form-input .subject{
-        width: 100%;
-    }
-    .form-input textarea{
-        width: 100%;
-    }
-    
 }

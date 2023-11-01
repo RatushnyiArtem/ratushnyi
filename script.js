@@ -48,6 +48,12 @@ cross.addEventListener('click', cancel)
 function cancel(){
   splash.classList.remove('open')
 }
+window.addEventListener('keydown', (e) => {
+  if (e.key === "Escape") {
+    splash.classList.remove('open')
+  }
+})
+
 let theme_change = document.querySelector('.themest')
 let orange = document.getElementById('orange')
 let blue = document.getElementById('blue')
@@ -1054,6 +1060,78 @@ scroller.addEventListener('mousemove', function (e) {
 
   this.scrollLeft += startingX - e.clientX
 })
+let email = document.querySelector('.social-block')
+let telegram = document.querySelector('.social-block1')
+let instagram = document.querySelector('.social-block2')
+let messages = document.querySelector('.m-message')
+let measureBody = document.querySelector('.social-blocker')
+let measureBody1 = document.querySelector('.social-blocker1')
+let measureBody2 = document.querySelector('.social-blocker2')
+let crossout = document.getElementById('cross3')
+let crossout1 = document.getElementById('cross1')
+let crossout2 = document.getElementById('cross2')
+let placement = measureBody.closest(':not(.social-blocker)')
+let other = !placement;
+
+let unlock = true;
+email.addEventListener('click', function() {
+  messages.classList.add('open');
+  messages.classList.add('email');
+
+})
+crossout.addEventListener('click', function() {
+  messages.classList.remove('open');
+  messages.classList.remove('email');
+})
+crossout1.addEventListener('click', function() {
+  messages.classList.remove('open');
+  messages.classList.remove('telegram');
+})
+crossout2.addEventListener('click', function() {
+  messages.classList.remove('open');
+  messages.classList.remove('instagram');
+})
+telegram.addEventListener('click', function() {
+  messages.classList.add('open');
+  messages.classList.add('telegram');
+})
+instagram.addEventListener('click', function() {
+  messages.classList.add('open');
+  messages.classList.add('instagram');
+})
 
 
 
+window.addEventListener('keydown', (e) => {
+  if (e.key === "Escape") {
+    messages.classList.remove('open')
+    messages.classList.remove('email')
+    messages.classList.remove('instagram');
+    messages.classList.remove('telegram');
+  }
+})
+
+measureBody.addEventListener('click', event =>{
+  event._isClickWithInModal = true;
+});
+messages.addEventListener('click', event => {
+  if(event._isClickWithInModal) return;
+  event.currentTarget.classList.remove('open')
+  event.currentTarget.classList.remove('email')
+})
+measureBody1.addEventListener('click', event =>{
+  event._isClickWithInModal = true;
+});
+messages.addEventListener('click', event => {
+  if(event._isClickWithInModal) return;
+  event.currentTarget.classList.remove('open')
+  event.currentTarget.classList.remove('telegram')
+})
+measureBody2.addEventListener('click', event =>{
+  event._isClickWithInModal = true;
+});
+messages.addEventListener('click', event => {
+  if(event._isClickWithInModal) return;
+  event.currentTarget.classList.remove('open')
+  event.currentTarget.classList.remove('instagram')
+})
