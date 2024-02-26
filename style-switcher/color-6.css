@@ -191,5 +191,51 @@ span.text_more{
         clip-path: inset(0 0 0 80%);
     }
 }
-
-
+p span.cursor{
+    display: inline-block;
+    background-color: #FD0834;
+    margin-left: 0.2rem;
+    width: 3px;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0%{ 
+        background-color: #FD0834; 
+    }
+    49%{
+         background-color: #FD0834;
+        }
+    50%{
+        background-color: transparent;
+    }
+    99%{
+        background-color: transparent;
+    }
+    100%{
+        background-color: #FD0834;
+    }
+}
+.blog-text h1{
+    color: #FD0834;
+  }
+  .linkmore a{
+    color:#FD0834;
+  }
+  .author-block p{
+    color:#FD0834;
+  }
+  .skill .skill-bar::after{
+    background-color: #FD0834;
+  }
+  .lang-bar::after{
+    background: #FD0834;
+}
+.first-text{
+    transition: all .5s linear;
+}
+.second-text{
+    transition: all .5s linear;
+}
+.third-text{
+    transition: all .5s linear;
+}  

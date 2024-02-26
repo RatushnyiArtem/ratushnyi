@@ -1,41 +1,3 @@
-$(document).ready(function (){
-    if(!$("#myCanva").tagcanvas({
-        textColour: "white",
-        outlineColour: "transparent",
-        maxSpeed: 0.05,
-        weight: true,
-        textFont: 'Space Grotesk'
-    }, "tags")){
-        $("#mySphere");
-    }
-})
-const wrapper = document.querySelector('.blog-slider')
-
-let pressed = false
-let startX = 0
-
-wrapper.addEventListener('mousedown', function (e) {
-  pressed = true
-  startX = e.clientX
-  this.style.cursor = 'grabbing'
-})
-
-wrapper.addEventListener('mouseleave', function (e) {
-  pressed = false
-})
-
-window.addEventListener('mouseup', function (e) {
-  pressed = false
-  wrapper.style.cursor = 'grab'
-})
-
-wrapper.addEventListener('mousemove', function (e) {
-  if(!pressed) {
-    return
-  }
-
-  this.scrollLeft += startX - e.clientX
-})
 let setting = document.getElementById('setting')
 let splash = document.querySelector('.menu-splash')
 let body = document.querySelector('body')
@@ -48,12 +10,6 @@ cross.addEventListener('click', cancel)
 function cancel(){
   splash.classList.remove('open')
 }
-window.addEventListener('keydown', (e) => {
-  if (e.key === "Escape") {
-    splash.classList.remove('open')
-  }
-})
-
 let theme_change = document.querySelector('.themest')
 let orange = document.getElementById('orange')
 let blue = document.getElementById('blue')
@@ -94,7 +50,6 @@ let dark_theme = document.querySelector('.dark-template')
 let logo_dark = document.querySelector('.dark_classic')
 let logo_classic = document.querySelector('.classic')
 let darken = document.querySelector('.darkstyle')
-let canva = document.getElementById('myCanva')
 let dark_texting = document.querySelector('.r_dark')
 light_theme.addEventListener('click', switch_light)
 function switch_light(){
@@ -107,17 +62,7 @@ function switch_light(){
   classic_texting.style.display = 'none'
   rat_classic.style.display = 'none'
   rat_dark.style.display = 'block'
-  $(document).ready(function (){
-    if(!$("#myCanva").tagcanvas({
-        textColour: "#333333",
-        outlineColour: "transparent",
-        maxSpeed: 0.05,
-        weight: true,
-        textFont: 'Space Grotesk'
-    }, "tags")){
-        $("#mySphere");
-    }
-})
+
   
   if(orange_change.classList.contains('stylist')){
     logo_dark.style.display = 'none'
@@ -126,17 +71,7 @@ function switch_light(){
     classic_texting.style.display = 'none'
     rat_classic.style.display = 'none'
     rat_dark.style.display = 'none'
-    $(document).ready(function (){
-      if(!$("#myCanva").tagcanvas({
-          textColour: "#FD792F",
-          outlineColour: "transparent",
-          maxSpeed: 0.05,
-          weight: true,
-          textFont: 'Space Grotesk'
-      }, "tags")){
-          $("#mySphere");
-      }
-  })  
+ 
   } else if(violet_change.classList.contains('stylist')){
     logo_dark.style.display = 'none'
     logo_classic.style.display = 'none'
@@ -144,17 +79,7 @@ function switch_light(){
     classic_texting.style.display = 'none'
     rat_classic.style.display = 'none'
     rat_dark.style.display = 'none'
-    $(document).ready(function (){
-      if(!$("#myCanva").tagcanvas({
-          textColour: "#915CEB",
-          outlineColour: "transparent",
-          maxSpeed: 0.05,
-          weight: true,
-          textFont: 'Space Grotesk'
-      }, "tags")){
-          $("#mySphere");
-      }
-  })  
+
   } else if(blue_change.classList.contains('stylist')){
     logo_dark.style.display = 'none'
     logo_classic.style.display = 'none'
@@ -162,17 +87,7 @@ function switch_light(){
     classic_texting.style.display = 'none'
     rat_classic.style.display = 'none'
     rat_dark.style.display = 'none'
-    $(document).ready(function (){
-      if(!$("#myCanva").tagcanvas({
-          textColour: "#74B6D2",
-          outlineColour: "transparent",
-          maxSpeed: 0.05,
-          weight: true,
-          textFont: 'Space Grotesk'
-      }, "tags")){
-          $("#mySphere");
-      }
-  })  
+
   } else if(yellow_change.classList.contains('stylist')){
     logo_dark.style.display = 'none'
     logo_classic.style.display = 'none'
@@ -180,17 +95,7 @@ function switch_light(){
     classic_texting.style.display = 'none'
     rat_classic.style.display = 'none'
     rat_dark.style.display = 'none'
-    $(document).ready(function (){
-      if(!$("#myCanva").tagcanvas({
-          textColour: "#F1E132",
-          outlineColour: "transparent",
-          maxSpeed: 0.05,
-          weight: true,
-          textFont: 'Space Grotesk'
-      }, "tags")){
-          $("#mySphere");
-      }
-  })  
+
   } else if(cyan_change.classList.contains('stylist')){
     logo_dark.style.display = 'none'
     logo_classic.style.display = 'none'
@@ -198,17 +103,7 @@ function switch_light(){
     classic_texting.style.display = 'none'
     rat_classic.style.display = 'none'
     rat_dark.style.display = 'none'
-    $(document).ready(function (){
-      if(!$("#myCanva").tagcanvas({
-          textColour: "#08FDD8",
-          outlineColour: "transparent",
-          maxSpeed: 0.05,
-          weight: true,
-          textFont: 'Space Grotesk'
-      }, "tags")){
-          $("#mySphere");
-      }
-  })  
+ 
   } else if(red_change.classList.contains('stylist')){
     logo_dark.style.display = 'none'
     logo_classic.style.display = 'none'
@@ -216,17 +111,7 @@ function switch_light(){
     classic_texting.style.display = 'none'
     rat_classic.style.display = 'none'
     rat_dark.style.display = 'none'
-    $(document).ready(function (){
-      if(!$("#myCanva").tagcanvas({
-          textColour: "#FD0834",
-          outlineColour: "transparent",
-          maxSpeed: 0.05,
-          weight: true,
-          textFont: 'Space Grotesk'
-      }, "tags")){
-          $("#mySphere");
-      }
-  })  
+  
   } else{
     logo_classic.style.display = 'none'
     logo_dark.style.display = 'block' 
@@ -234,17 +119,7 @@ function switch_light(){
     classic_texting.style.display = 'none' 
     rat_classic.style.display = 'none'
     rat_dark.style.display = 'block'
-    $(document).ready(function (){
-      if(!$("#myCanva").tagcanvas({
-          textColour: "#333333",
-          outlineColour: "transparent",
-          maxSpeed: 0.05,
-          weight: true,
-          textFont: 'Space Grotesk'
-      }, "tags")){
-          $("#mySphere");
-      }
-  })  
+ 
   }
 }
 dark_theme.addEventListener('click', switch_dark)
@@ -258,17 +133,7 @@ function switch_dark(){
   classic_texting.style.display = 'inline'
   rat_classic.style.display = 'block'
   rat_dark.style.display = 'none'
-  $(document).ready(function (){
-    if(!$("#myCanva").tagcanvas({
-        textColour: "white",
-        outlineColour: "transparent",
-        maxSpeed: 0.05,
-        weight: true,
-        textFont: 'Space Grotesk'
-    }, "tags")){
-        $("#mySphere");
-    }
-})
+
 
   if(orange_change.classList.contains('stylist')){
     logo_dark.style.display = 'none'
@@ -277,17 +142,7 @@ function switch_dark(){
     classic_texting.style.display = 'none'
     rat_classic.style.display = 'none'
     rat_dark.style.display = 'none'
-    $(document).ready(function (){
-      if(!$("#myCanva").tagcanvas({
-          textColour: "#FD792F",
-          outlineColour: "transparent",
-          maxSpeed: 0.05,
-          weight: true,
-          textFont: 'Space Grotesk'
-      }, "tags")){
-          $("#mySphere");
-      }
-  })    
+   
   } else if(violet_change.classList.contains('stylist')){
     logo_dark.style.display = 'none'
     logo_classic.style.display = 'none'
@@ -295,17 +150,7 @@ function switch_dark(){
     classic_texting.style.display = 'none'
     rat_classic.style.display = 'none'
     rat_dark.style.display = 'none'
-    $(document).ready(function (){
-      if(!$("#myCanva").tagcanvas({
-          textColour: "#915CEB",
-          outlineColour: "transparent",
-          maxSpeed: 0.05,
-          weight: true,
-          textFont: 'Space Grotesk'
-      }, "tags")){
-          $("#mySphere");
-      }
-  })  
+
   } else if(blue_change.classList.contains('stylist')){
     logo_dark.style.display = 'none'
     logo_classic.style.display = 'none'
@@ -313,17 +158,7 @@ function switch_dark(){
     classic_texting.style.display = 'none'
     rat_classic.style.display = 'none'
     rat_dark.style.display = 'none'
-    $(document).ready(function (){
-      if(!$("#myCanva").tagcanvas({
-          textColour: "#74B6D2",
-          outlineColour: "transparent",
-          maxSpeed: 0.05,
-          weight: true,
-          textFont: 'Space Grotesk'
-      }, "tags")){
-          $("#mySphere");
-      }
-  })  
+
   } else if(yellow_change.classList.contains('stylist')){
     logo_dark.style.display = 'none'
     logo_classic.style.display = 'none'
@@ -331,17 +166,7 @@ function switch_dark(){
     classic_texting.style.display = 'none'
     rat_classic.style.display = 'none'
     rat_dark.style.display = 'none'
-    $(document).ready(function (){
-      if(!$("#myCanva").tagcanvas({
-          textColour: "#F1E132",
-          outlineColour: "transparent",
-          maxSpeed: 0.05,
-          weight: true,
-          textFont: 'Space Grotesk'
-      }, "tags")){
-          $("#mySphere");
-      }
-  })  
+
   } else if(cyan_change.classList.contains('stylist')){
     logo_dark.style.display = 'none'
     logo_classic.style.display = 'none'
@@ -349,17 +174,7 @@ function switch_dark(){
     classic_texting.style.display = 'none'
     rat_classic.style.display = 'none'
     rat_dark.style.display = 'none'
-    $(document).ready(function (){
-      if(!$("#myCanva").tagcanvas({
-          textColour: "#08FDD8",
-          outlineColour: "transparent",
-          maxSpeed: 0.05,
-          weight: true,
-          textFont: 'Space Grotesk'
-      }, "tags")){
-          $("#mySphere");
-      }
-  })  
+  
   } else if(red_change.classList.contains('stylist')){
     logo_dark.style.display = 'none'
     logo_classic.style.display = 'none'
@@ -367,36 +182,14 @@ function switch_dark(){
     classic_texting.style.display = 'none'
     rat_classic.style.display = 'none'
     rat_dark.style.display = 'none'
-    $(document).ready(function (){
-      if(!$("#myCanva").tagcanvas({
-          textColour: "#FD0834",
-          outlineColour: "transparent",
-          maxSpeed: 0.05,
-          weight: true,
-          textFont: 'Space Grotesk'
-      }, "tags")){
-          $("#mySphere");
-      }
-  })  
+
 } else{
     logo_classic.style.display = 'block'
     logo_dark.style.display = 'none'
     dark_texting.style.display = 'none'
     classic_texting.style.display = 'inline'
     rat_classic.style.display = 'block'
-    rat_dark.style.display = 'none'
-    $(document).ready(function (){
-      if(!$("#myCanva").tagcanvas({
-          textColour: "white",
-          outlineColour: "transparent",
-          maxSpeed: 0.05,
-          weight: true,
-          textFont: 'Space Grotesk'
-      }, "tags")){
-          $("#mySphere");
-      }
-  })  
-
+    rat_dark.style.display = 'none' 
 }
 }
 orange.addEventListener('click',change_logo)
@@ -411,17 +204,7 @@ orange.addEventListener('click',change_logo)
       classic_texting.style.display = 'inline'
       rat_classic.style.display = 'block'
       rat_dark.style.display = 'none'
-      $(document).ready(function (){
-        if(!$("#myCanva").tagcanvas({
-            textColour: "white",
-            outlineColour: "transparent",
-            maxSpeed: 0.05,
-            weight: true,
-            textFont: 'Space Grotesk'
-        }, "tags")){
-            $("#mySphere");
-        }
-    })    
+    
     } else{
       logo_classic.style.display = 'none';
       logo_dark.style.display = 'block'
@@ -429,17 +212,7 @@ orange.addEventListener('click',change_logo)
       classic_texting.style.display = 'none'
       rat_classic.style.display = 'none'
       rat_dark.style.display = 'block'
-      $(document).ready(function (){
-        if(!$("#myCanva").tagcanvas({
-            textColour: "#333333",
-            outlineColour: "transparent",
-            maxSpeed: 0.05,
-            weight: true,
-            textFont: 'Space Grotesk'
-        }, "tags")){
-            $("#mySphere");
-        }
-    })    
+    
     }
     orange_texting.style.display = 'none'
     rat_orange.style.display = 'none'
@@ -467,18 +240,7 @@ orange.addEventListener('click',change_logo)
     blue_texting.style.display = 'none'
     orange_change.classList.add('stylist')
     orange_change.removeAttribute('disabled')
-    logo_orange.style.display = 'block';
-    $(document).ready(function (){
-      if(!$("#myCanva").tagcanvas({
-          textColour: "#FD792F",
-          outlineColour: "transparent",
-          maxSpeed: 0.05,
-          weight: true,
-          textFont: 'Space Grotesk'
-      }, "tags")){
-          $("#mySphere");
-      }
-  })  
+    logo_orange.style.display = 'block'; 
     if(theme_change.classList.contains('dark')){
       logo_classic.style.display = 'none';
     } else{
@@ -511,38 +273,14 @@ orange.addEventListener('click',change_logo)
         dark_texting.style.display = 'none'
         classic_texting.style.display = 'inline'
         rat_classic.style.display = 'block'
-        rat_dark.style.display = 'none'
-        $(document).ready(function (){
-          if(!$("#myCanva").tagcanvas({
-              textColour: "white",
-              outlineColour: "transparent",
-              maxSpeed: 0.05,
-              weight: true,
-              textFont: 'Space Grotesk'
-          }, "tags")){
-              $("#mySphere");
-          }
-      })  
-    
+        rat_dark.style.display = 'none'    
       } else{
         logo_classic.style.display = 'none';
         logo_dark.style.display = 'block'
         dark_texting.style.display = 'inline'
         classic_texting.style.display = 'none'
         rat_classic.style.display = 'none'
-        rat_dark.style.display = 'block'
-        $(document).ready(function (){
-          if(!$("#myCanva").tagcanvas({
-              textColour: "#333333",
-              outlineColour: "transparent",
-              maxSpeed: 0.05,
-              weight: true,
-              textFont: 'Space Grotesk'
-          }, "tags")){
-              $("#mySphere");
-          }
-      })  
-    
+        rat_dark.style.display = 'block' 
       }      
       orange_texting.style.display = 'none'
       blue_texting.style.display = 'none'
@@ -573,18 +311,7 @@ orange.addEventListener('click',change_logo)
       blue_change.classList.add('stylist')
       blue_change.removeAttribute('disabled')
       blue_texting.style.display = 'inline'
-      $(document).ready(function (){
-        if(!$("#myCanva").tagcanvas({
-            textColour: "#74B6D2",
-            outlineColour: "transparent",
-            maxSpeed: 0.05,
-            weight: true,
-            textFont: 'Space Grotesk'
-        }, "tags")){
-            $("#mySphere");
-        }
-    })  
-  
+
       logo_blue.style.display = 'block';
       if(theme_change.classList.contains('dark')){
         logo_classic.style.display = 'none';
@@ -617,36 +344,14 @@ orange.addEventListener('click',change_logo)
         dark_texting.style.display = 'none'
         classic_texting.style.display = 'inline'
         rat_classic.style.display = 'block'
-        rat_dark.style.display = 'none'
-        $(document).ready(function (){
-          if(!$("#myCanva").tagcanvas({
-              textColour: "white",
-              outlineColour: "transparent",
-              maxSpeed: 0.05,
-              weight: true,
-              textFont: 'Space Grotesk'
-          }, "tags")){
-              $("#mySphere");
-          }
-      })      
+        rat_dark.style.display = 'none'     
       } else{
         logo_classic.style.display = 'none';
         logo_dark.style.display = 'block'
         dark_texting.style.display = 'inline'
         classic_texting.style.display = 'none'
         rat_classic.style.display = 'none'
-        rat_dark.style.display = 'block'
-        $(document).ready(function (){
-          if(!$("#myCanva").tagcanvas({
-              textColour: "#333333",
-              outlineColour: "transparent",
-              maxSpeed: 0.05,
-              weight: true,
-              textFont: 'Space Grotesk'
-          }, "tags")){
-              $("#mySphere");
-          }
-      })      
+        rat_dark.style.display = 'block'     
       }      
       violet_texting.style.display = 'none'
       rat_purple.style.display = 'none'
@@ -674,17 +379,7 @@ orange.addEventListener('click',change_logo)
       orange_texting.style.display = 'none'
       violet_change.classList.add('stylist')
       violet_change.removeAttribute('disabled')
-      $(document).ready(function (){
-        if(!$("#myCanva").tagcanvas({
-            textColour: "#915CEB",
-            outlineColour: "transparent",
-            maxSpeed: 0.05,
-            weight: true,
-            textFont: 'Space Grotesk'
-        }, "tags")){
-            $("#mySphere");
-        }
-    })    
+
       if(theme_change.classList.contains('dark')){
         logo_classic.style.display = 'none';
       } else{
@@ -719,17 +414,7 @@ orange.addEventListener('click',change_logo)
         classic_texting.style.display = 'inline'
         rat_classic.style.display = 'block'
         rat_dark.style.display = 'none'
-        $(document).ready(function (){
-          if(!$("#myCanva").tagcanvas({
-              textColour: "white",
-              outlineColour: "transparent",
-              maxSpeed: 0.05,
-              weight: true,
-              textFont: 'Space Grotesk'
-          }, "tags")){
-              $("#mySphere");
-          }
-      })      
+
       } else{
         logo_classic.style.display = 'none';
         logo_dark.style.display = 'block'
@@ -737,17 +422,7 @@ orange.addEventListener('click',change_logo)
         classic_texting.style.display = 'none'
         rat_classic.style.display = 'none'
         rat_dark.style.display = 'block'
-        $(document).ready(function (){
-          if(!$("#myCanva").tagcanvas({
-              textColour: "#333333",
-              outlineColour: "transparent",
-              maxSpeed: 0.05,
-              weight: true,
-              textFont: 'Space Grotesk'
-          }, "tags")){
-              $("#mySphere");
-          }
-      })     
+
       }      
       orange_texting.style.display = 'none'
       yellow_texting.style.display = 'none'
@@ -775,17 +450,7 @@ orange.addEventListener('click',change_logo)
       violet_change.classList.remove('stylist')
       violet_change.setAttribute('disabled', 'true')
       violet_texting.style.display = 'none'
-      $(document).ready(function (){
-        if(!$("#myCanva").tagcanvas({
-            textColour: "#F1E132",
-            outlineColour: "transparent",
-            maxSpeed: 0.05,
-            weight: true,
-            textFont: 'Space Grotesk'
-        }, "tags")){
-            $("#mySphere");
-        }
-    })    
+
       if(theme_change.classList.contains('dark')){
         logo_classic.style.display = 'none';
       } else{
@@ -823,17 +488,7 @@ orange.addEventListener('click',change_logo)
         classic_texting.style.display = 'inline'
         rat_classic.style.display = 'block'
         rat_dark.style.display = 'none'
-        $(document).ready(function (){
-          if(!$("#myCanva").tagcanvas({
-              textColour: "white",
-              outlineColour: "transparent",
-              maxSpeed: 0.05,
-              weight: true,
-              textFont: 'Space Grotesk'
-          }, "tags")){
-              $("#mySphere");
-          }
-      })      
+     
       } else{
         logo_classic.style.display = 'none';
         logo_dark.style.display = 'block'
@@ -841,17 +496,7 @@ orange.addEventListener('click',change_logo)
         classic_texting.style.display = 'none'
         rat_classic.style.display = 'none'
         rat_dark.style.display = 'block'
-        $(document).ready(function (){
-          if(!$("#myCanva").tagcanvas({
-              textColour: "#333333",
-              outlineColour: "transparent",
-              maxSpeed: 0.05,
-              weight: true,
-              textFont: 'Space Grotesk'
-          }, "tags")){
-              $("#mySphere");
-          }
-      })      
+
       }      
       orange_texting.style.display = 'none'
       logo_cyan.style.display = 'none'  
@@ -879,17 +524,7 @@ orange.addEventListener('click',change_logo)
       violet_change.classList.remove('stylist')
       violet_change.setAttribute('disabled', 'true')
       violet_texting.style.display = 'none'
-      $(document).ready(function (){
-        if(!$("#myCanva").tagcanvas({
-            textColour: "#08FDD8",
-            outlineColour: "transparent",
-            maxSpeed: 0.05,
-            weight: true,
-            textFont: 'Space Grotesk'
-        }, "tags")){
-            $("#mySphere");
-        }
-    })    
+
       if(theme_change.classList.contains('dark')){
         logo_classic.style.display = 'none';
       } else{
@@ -927,17 +562,7 @@ orange.addEventListener('click',change_logo)
       classic_texting.style.display = 'inline'
       rat_classic.style.display = 'block'
       rat_dark.style.display = 'none'
-      $(document).ready(function (){
-        if(!$("#myCanva").tagcanvas({
-            textColour: "white",
-            outlineColour: "transparent",
-            maxSpeed: 0.05,
-            weight: true,
-            textFont: 'Space Grotesk'
-        }, "tags")){
-            $("#mySphere");
-        }
-    })    
+
     } else{
       logo_classic.style.display = 'none';
       logo_dark.style.display = 'block'
@@ -945,17 +570,7 @@ orange.addEventListener('click',change_logo)
       classic_texting.style.display = 'none'
       rat_classic.style.display = 'none'
       rat_dark.style.display = 'block'
-      $(document).ready(function (){
-        if(!$("#myCanva").tagcanvas({
-            textColour: "#333333",
-            outlineColour: "transparent",
-            maxSpeed: 0.05,
-            weight: true,
-            textFont: 'Space Grotesk'
-        }, "tags")){
-            $("#mySphere");
-        }
-    })    
+   
     }
       orange_texting.style.display = 'none'
       logo_red.style.display = 'none'
@@ -983,17 +598,7 @@ orange.addEventListener('click',change_logo)
       violet_change.classList.remove('stylist')
       violet_change.setAttribute('disabled', 'true')
       violet_texting.style.display = 'none'
-      $(document).ready(function (){
-        if(!$("#myCanva").tagcanvas({
-            textColour: "#FD0834",
-            outlineColour: "transparent",
-            maxSpeed: 0.05,
-            weight: true,
-            textFont: 'Space Grotesk'
-        }, "tags")){
-            $("#mySphere");
-        }
-    })    
+
       if(theme_change.classList.contains('dark')){
         logo_classic.style.display = 'none';
       } else{
@@ -1018,251 +623,80 @@ orange.addEventListener('click',change_logo)
       
     }  
   }
+  $(document).ready(function() {
+    let page = document.querySelector('.page')
+    let preloader = document.querySelector('.preloader')
+     let percent = document.getElementById('percentage')      
+     let starone = document.querySelector(".starone") 
+     let startwo = document.querySelector(".startwo")
+     let starthree = document.querySelector('.starthree');
+     let starfour = document.querySelector(".starfour");
+     let starfive = document.querySelector('.starfive')
+     let starsixth = document.querySelector('.starsix')
+     let starseven = document.querySelector('.starseven')
+     let stareight = document.querySelector('.stareight')
+     let starnine = document.querySelector('.starnine')
+     let starten = document.querySelector('.starten')
+     let stareleven = document.querySelector('.stareleven')
+     let startwelve = document.querySelector('.startwelve')
+    let count = 0;
+    let counter = setInterval(function() {
 
+        if(count < 101) {
+            $(percent).text(count + '%');
+            if (count < 9){
+                starone.classList.add('active');
+            }
+            if (count < 18 && count>9){
+                startwo.classList.add('active')
+            }
+            if (count < 27 && count>18){
+                starthree.classList.add('active')
+            }
+            if (count < 36 && count > 27){
+                starfour.classList.add('active')
+            }
+            if (count < 45 && count > 36){
+                starfive.classList.add('active')
+            }
+            if (count < 54 && count > 45){
+                starsixth.classList.add('active')
+            }
+            if(count > 54 && count < 63){
+                starseven.classList.add('active')
+            }
+            if(count > 63 && count < 72){
+                stareight.classList.add('active')
+            }
+            if(count>72 && count<81){
+                starnine.classList.add('active')
+            }
+            if(count>81 && count<90){
+                starten.classList.add('active')
+            }
+            if(count>90 && count<99){
+                stareleven.classList.add('active')
+            }
+            else{
+                startwelve.classList.add('active')
+            }
 
-// let newStyles = document.querySelectorAll('.alternative-style')
-// function setColor (color) {
-//   newStyles.forEach((style) => {
-//     if(color === style.getAttribute("title")) {
-//       style.removeAttribute("disabled")
-//     }
-//     else{
-//       style.setAttribute('disabled', 'true')
-//     }
-//   })
-// }
-// let newStyles = [document.querySelectorAll('.alternative-style')]
-// console.log(newStyles.title)
-const scroller = document.querySelector('.portfolio-projects')
+            count++
+            if (count == 100){
+                preloader.classList.add('active')
+                page.classList.add("ready")
+            }
+        }
 
-let press = false
-let startingX = 0
-
-scroller.addEventListener('mousedown', function (e) {
-  press = true
-  startingX = e.clientX
-  this.style.cursor = 'grabbing'
-})
-
-scroller.addEventListener('mouseleave', function (e) {
-  press = false
-})
-
-window.addEventListener('mouseup', function (e) {
-  press = false
-  scroller.style.cursor = 'grab'
-})
-
-scroller.addEventListener('mousemove', function (e) {
-  if(!press) {
-    return
-  }
-
-  this.scrollLeft += startingX - e.clientX
-})
-let email = document.querySelector('.social-block')
-let telegram = document.querySelector('.social-block1')
-let instagram = document.querySelector('.social-block2')
-let messages = document.querySelector('.m-message')
-let measureBody = document.querySelector('.social-blocker')
-let measureBody1 = document.querySelector('.social-blocker1')
-let measureBody2 = document.querySelector('.social-blocker2')
-let crossout = document.getElementById('cross3')
-let crossout1 = document.getElementById('cross1')
-let crossout2 = document.getElementById('cross2')
-let placement = measureBody.closest(':not(.social-blocker)')
-let other = !placement;
-
-let unlock = true;
-email.addEventListener('click', function() {
-  messages.classList.add('open');
-  messages.classList.add('email');
-
-})
-crossout.addEventListener('click', function() {
-  messages.classList.remove('open');
-  messages.classList.remove('email');
-})
-crossout1.addEventListener('click', function() {
-  messages.classList.remove('open');
-  messages.classList.remove('telegram');
-})
-crossout2.addEventListener('click', function() {
-  messages.classList.remove('open');
-  messages.classList.remove('instagram');
-})
-telegram.addEventListener('click', function() {
-  messages.classList.add('open');
-  messages.classList.add('telegram');
-})
-instagram.addEventListener('click', function() {
-  messages.classList.add('open');
-  messages.classList.add('instagram');
-})
-
-
-
-window.addEventListener('keydown', (e) => {
-  if (e.key === "Escape") {
-    messages.classList.remove('open')
-    messages.classList.remove('email')
-    messages.classList.remove('instagram');
-    messages.classList.remove('telegram');
-  }
-})
-
-measureBody.addEventListener('click', event =>{
-  event._isClickWithInModal = true;
-});
-messages.addEventListener('click', event => {
-  if(event._isClickWithInModal) return;
-  event.currentTarget.classList.remove('open')
-  event.currentTarget.classList.remove('email')
-})
-measureBody1.addEventListener('click', event =>{
-  event._isClickWithInModal = true;
-});
-messages.addEventListener('click', event => {
-  if(event._isClickWithInModal) return;
-  event.currentTarget.classList.remove('open')
-  event.currentTarget.classList.remove('telegram')
-})
-measureBody2.addEventListener('click', event =>{
-  event._isClickWithInModal = true;
-});
-messages.addEventListener('click', event => {
-  if(event._isClickWithInModal) return;
-  event.currentTarget.classList.remove('open')
-  event.currentTarget.classList.remove('instagram')
-})
-$(document).ready(function() {
-  let preloader = document.querySelector('.preloader')
-  let page = document.querySelector('.page')
-   let percent = document.getElementById('percentage')      
-   let starone = document.querySelector(".starone") 
-   let startwo = document.querySelector(".startwo")
-   let starthree = document.querySelector('.starthree');
-   let starfour = document.querySelector(".starfour");
-   let starfive = document.querySelector('.starfive')
-   let starsixth = document.querySelector('.starsix')
-   let starseven = document.querySelector('.starseven')
-   let stareight = document.querySelector('.stareight')
-   let starnine = document.querySelector('.starnine')
-   let starten = document.querySelector('.starten')
-   let stareleven = document.querySelector('.stareleven')
-   let startwelve = document.querySelector('.startwelve')
-  let count = 0;
-  let counter = setInterval(function() {
-
-      if(count < 101) {
-          $(percent).text(count + '%');
-          if (count < 9){
-              starone.classList.add('active');
-          }
-          if (count < 18 && count>9){
-              startwo.classList.add('active')
-          }
-          if (count < 27 && count>18){
-              starthree.classList.add('active')
-          }
-          if (count < 36 && count > 27){
-              starfour.classList.add('active')
-          }
-          if (count < 45 && count > 36){
-              starfive.classList.add('active')
-          }
-          if (count < 54 && count > 45){
-              starsixth.classList.add('active')
-          }
-          if(count > 54 && count < 63){
-              starseven.classList.add('active')
-          }
-          if(count > 63 && count < 72){
-              stareight.classList.add('active')
-          }
-          if(count>72 && count<81){
-              starnine.classList.add('active')
-          }
-          if(count>81 && count<90){
-              starten.classList.add('active')
-          }
-          if(count>90 && count<99){
-              stareleven.classList.add('active')
-          }
-          else{
-              startwelve.classList.add('active')
-          }
-
-          count++
-          if (count == 100){
-              preloader.classList.add('active')
-              page.classList.add("ready")
-
-          }
-      }
-
-  }, 50)
-  
+    }, 50)
+    
 });
 
 gsap.to('.preloader', 1, {
-  delay: 5,
-  y: "-100%",
-  ease: Expo.EaseInOut
+    delay: 5,
+    y: "-100%",
+    ease: Expo.EaseInOut
 });
-const typedTextSpan = document.querySelector(".typed-text");
-const cursorSpan = document.querySelector(".cursor");
-
-const textArray = ["WEB DEVELOPER", "UI/UX DESIGNER"];
-const typingDelay = 200;
-const erasingDelay = 100;
-const newTextDelay = 2000; // Delay between current and next text
-let textArrayIndex = 0;
-let charIndex = 0;
-
-function type() {
-  if (charIndex < textArray[textArrayIndex].length) {
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, typingDelay);
-  } 
-  else {
-    cursorSpan.classList.remove("typing");
-  	setTimeout(erase, newTextDelay);
-  }
-}
-
-function erase() {
-	if (charIndex > 0) {
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-    charIndex--;
-    setTimeout(erase, erasingDelay);
-  } 
-  else {
-    cursorSpan.classList.remove("typing");
-    textArrayIndex++;
-    if(textArrayIndex>=textArray.length) textArrayIndex=0;
-    setTimeout(type, typingDelay + 1100);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-  if(textArray.length) setTimeout(type, newTextDelay + 350);
-});
-
-
-
-const track = document.getElementById("projects");
-
-const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
-
-const handleOnUp = () => {
-  track.dataset.mouseDownAt = "0";  
-  track.dataset.prevPercentage = track.dataset.percentage;
-}
-
 const animItems = document.querySelectorAll('._anim-items')
 let preloader = document.querySelector('.preloader')
 let condition  = preloader.classList.contains("active")
@@ -1304,10 +738,44 @@ if (animItems.length > 0){
     }, 500);
     
 }
+const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
 
+const textArray = ["WEB DEVELOPER", "UI/UX DESIGNER"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 2000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
 
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+  	setTimeout(erase, newTextDelay);
+  }
+}
 
+function erase() {
+	if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
 
-
-
-
+document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+  if(textArray.length) setTimeout(type, newTextDelay + 350);
+});

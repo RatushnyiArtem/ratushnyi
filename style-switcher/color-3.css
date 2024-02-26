@@ -1,5 +1,5 @@
 #colority-change{
-    color: #915CEB
+    color: #915CEB;
 }
 .btn-work a .buttn{
     width: 100%;
@@ -191,5 +191,51 @@ span.text_more{
         clip-path: inset(0 0 0 80%);
     }
 }
-
-
+p span.cursor{
+    display: inline-block;
+    background-color: #915CEB;
+    margin-left: 0.2rem;
+    width: 3px;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0%{ 
+        background-color: #915CEB;
+    }
+    49%{
+         background-color: #915CEB;
+        }
+    50%{
+        background-color: transparent;
+    }
+    99%{
+        background-color: transparent;
+    }
+    100%{
+        background-color: #915CEB;
+    }
+  }
+  .blog-text h1{
+    color: #915CEB;
+  }
+  .linkmore a{
+    color:#915CEB;
+  }
+  .author-block p{
+    color:#915CEB;
+  }
+  .skill-bar::after{
+    background: #915CEB;
+  }
+  .lang-bar::after{
+    background: #915CEB;
+}
+.first-text{
+    transition: all .5s linear;
+}
+.second-text{
+    transition: all .5s linear;
+}
+.third-text{
+    transition: all .5s linear;
+}
