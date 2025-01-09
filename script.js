@@ -1152,7 +1152,7 @@ $(document).ready(function() {
    let stareleven = document.querySelector('.stareleven')
    let startwelve = document.querySelector('.startwelve')
   let count = 0;
-  let counter = setInterval(function() {
+  let counter = setInterval(function(e) {
 
       if(count < 101) {
           $(percent).text(count + '%');
@@ -1201,12 +1201,12 @@ $(document).ready(function() {
           }
       }
 
-  }, 50)
+  }, 20)
   
 });
 
 gsap.to('.preloader', 1, {
-  delay: 5,
+  delay: 2,
   y: "-100%",
   ease: Expo.EaseInOut
 });
@@ -1304,6 +1304,65 @@ if (animItems.length > 0){
     }, 500);
     
 }
+
+// form activation
+
+// stop refreshing page when you click submit
+let messageForm = document.getElementById('newForm');
+let name = document.querySelector('.name')
+let subject = document.querySelector('.subject')
+let nameError = document.getElementById("name_error")
+let mail = document.querySelector('.email')
+let emailError = document.getElementById("email_error")
+let message = document.querySelector('.message')
+let messageError = document.getElementById("message_error")
+let successor = document.querySelector('.succes-line')
+messageForm.addEventListener('submit', (e)=>{
+  var email_check = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  var name_check = /^([A-Za-z])+[A-Za-z]$/
+  e.preventDefault();
+   if(!mail.value.match(email_check))
+   {
+      e.preventDefault();
+      emailError.innerHTML = "Valid Email is required";
+
+   } else{
+    emailError.innerHTML = "";
+   }
+   if(!name.value.match(name_check)){
+    e.preventDefault();
+    nameError.innerHTML = "Write your Name, should consist with letters!"
+   } else if(name.length === 0){
+    e.preventDefault();
+    nameError.innerHTML = "Name should consist more than 0 letters"
+   } else{
+    nameError.innerHTML = "";
+   }
+   if(message.value.length <= 3){
+    messageError.innerHTML = "That's required field, fill it!"
+   } else{
+    messageError.innerHTML = "";
+   }
+   var params = {
+    name:document.getElementById('name').value,
+    email:document.getElementById('email').value,
+    subject:document.getElementById('subject').value,
+    message:document.getElementById('message').value
+  }
+  emailjs.send("service_retozdw", "template_489cczz", params).then(function(res){
+    name.value = ""
+    mail.value = ""
+    subject.value = ""
+    message.value = ""
+    alert("Message was sent succesfully!")
+  })
+  
+})
+
+
+
+
+
 
 
 

@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    background-color: #333333;
+}
+.blog{
+    width: 100%;
+    height: 100%;
+}
+.hat{
+    max-width: 1920px;
+    width: 100%;
+    height: 378px;
+    background: url(./img/christmas-tree-3440x1440-14452.jpg);
+    background-size: cover;
+    padding-left: 35px;
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+.hat i{
+    color: white;
+    font-size: 22px;
+}
+.subhat{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 75px;
+    padding-right: 80px;
+    margin-bottom: 50px;
+    font-family: "Inter"
+}
+.subhat a span{
+    color: #A5A5A5;
+}
+.subhat a{
+    text-decoration: none;
+}
+.subhat span{
+    color:white;
+}
+.author{
+    display: flex;
+    color:white;
+    align-items: center;
+    font-family: Aldrich;
+    font-size: 12px;
+}
+.content{
+    padding-left: 75px;
+    padding-right: 80px;
+}
+.content h1{
+    color: white;
+    font-family: "Archivo Black";
+    margin-bottom: 40px;
+}
+.content p{
+    color: #ABAA;
+    font-size: 19px;
+    font-family: "Space Grotesk";
+    margin-bottom: 60px;
+}
+.image-section{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    scroll-snap-type: x;
+    user-select: none;
+    touch-action: pan-y;
+    overflow-x: auto;
+    cursor: grab;
+    scroll-behavior: smooth;
+}
+.slider-photo{
+    width: 412.5px;
+    min-width: 412.5px;
+    height: auto;
+    background: url(/img/what-is-brazil-known-for-christ-the-redeemer-aerial-hero-1920x890.avif);
+    /* filter: blur(8px); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+.slider-photo::after{
+    content: "";
+    opacity: .6;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #A5A5A5;
+    position: absolute;
+    z-index: 1;
+}
+.slider-photo p{
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    z-index: 3;
+
+}
+.m-message{
+    position: fixed;
+    z-index: 17;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: #00000062;
+    visibility: hidden;
+}
+.m-message .m-message-body .social-blocker .social-send a .btn-social{
+    width: 100%;
+    /* max-width: 450px; */
+    height: 78px;
+    border: 1px solid white;
+    border-radius: 0px 10px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    max-width: 279px;
+    margin: 0 auto;
+}
+
+.m-message-body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.m-message .m-message-body .social-blocker{
+    width: 600px;
+    height: 600px;
+    background-color: #333333;
+    position: absolute;
+    visibility: hidden;
+    transition: all .8s ease 0s;
+    transform: perspective(600px) translate(0,-100%) rotateX(45deg);
+    opacity: 0;
+}
+.m-message .m-message-body .social-close-message{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.m-message .m-message-body .social-close-message i{
+    font-size: 22px;
+    color: white;
+}
+.m-message .m-message-body .social-blocker{
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* border: 2px solid rgb(252, 252, 252); */
+            transition: all .6s;
+            /* animation: clippath 3s infinite linear; */
+            border-radius: 15px;
+    
+        }
+}
+.m-message .m-message-body .social-blocker:hover{
+    cursor: pointer;
+}
+.social-blocker .text_more {
+    color: white;
+    font-family: 'Sarpanch';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    transition: all .3s ease-in-out;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.m-message.open{
+    visibility: visible;
+}
+.m-message.email .m-message-body .social-blocker{
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+}
+.container {
+	padding: 2rem;
+}
+
+.slider-wrapper {
+	position: relative;
+	max-width: 48rem;
+	margin: 0 auto;
+}
+
+.slider {
+	display: flex;
+	aspect-ratio: 16 / 9;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+	scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider img {
+	flex: 1 0 100%;
+	/* scroll-snap-align: end; */
+	/* object-fit: cover; */
+    /* object-fit:scale-down; */
+}
+
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
+}
+
+@media screen and (max-width:558px) {
+    .subhat{
+        padding-left: 30px;
+        padding-right: 40px;
+    }
+    .content{
+        padding-left: 30px;
+        padding-right: 40px;
+    }
+}
+
+@media screen and (max-width:448px) {
+    .subhat{
+       padding-left: 0;
+       padding-right: 0;
+    }
+    .content{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+

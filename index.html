@@ -151,9 +151,9 @@
                         </div>
                     </div>
                     <div class="header-social">
-                        <a id="colority-change" href=""><i class="fa-brands fa-github"></i></a>
-                        <a id="colority-change" href=""><i class="fa-brands fa-instagram"></i></a>
-                        <a id="colority-change" href=""><i class="fa-brands fa-telegram"></i></a>
+                        <a id="colority-change" target="_blank" href="https://github.com/RatushnyiArtem"><i class="fa-brands fa-github"></i></a>
+                        <a id="colority-change" target="_blank" href="https://www.instagram.com/artem_ratushnyi17/"><i class="fa-brands fa-instagram"></i></a>
+                        <a id="colority-change" target="_blank" href="https://t.me/artem_ratushnyi17"><i class="fa-brands fa-telegram"></i></a>
                     </div>
                 </div>  
             </div>
@@ -319,7 +319,7 @@
                             Because of it’s vibe, you can spent your time with your family, share presents or help with Christmas dinner, but this year, unfortunately, I don’t feel this vibe and don’t have any mood to deal with something...</p>
                     </div>
                     <div class="more-text">
-                        <a id="colority-change" href="">Read more..</a>
+                        <a id="colority-change" href="./firstBlog.html">Read more..</a>
                     </div>
                 </div>
                 <div class="slide _anim-items _anim-no-hide">
@@ -498,27 +498,30 @@
             </div>
             <div class="contact-form">
                 <h1 id="colority-change">Contact me</h1>
-                <form action="">
+                <form id="newForm" action="">
                     <div class="form-wrapper">
                         <div class="form-input _anim-items _anim-no-hide">
-                            <input placeholder="Name" name="name" class="name" type="text">
+                            <input placeholder="Name" name="name" class="name" type="text" id="name" required>
                             <span></span>
+                            <span id="name_error"></span>
                         </div>
                         <div class="form-input _anim-items _anim-no-hide">
-                            <input placeholder="Email" type="email" name="email" class="email">
+                            <input placeholder="Email" type="email" name="email" class="email" id="email" required>
                             <span></span>
+                            <span id="email_error"></span>
                         </div>
                     </div>  
                     <div class="form-input _anim-items _anim-no-hide">
-                        <input placeholder="Subject" class="subject" type="text" name="subject" id="">
+                        <input placeholder="Subject" class="subject" type="text" name="subject" id="subject">
                         <span></span>
                     </div>
                     <div class="form-input _anim-items _anim-no-hide">
-                        <textarea placeholder="Message" class="message" name="message"></textarea>
+                        <textarea placeholder="Message" class="message" name="message" id="message" required></textarea>
                         <span></span>
+                        <span id="message_error"></span>
                     </div>
                     <div class="button-propose _anim-items _anim-no-hide">
-                        <button type="submit">
+                        <button type="submit" id = "submit_btn">
                             <div class="btn-contact">
                                 <span class="backgr"></span>
                                 <span class="text_more">
@@ -527,7 +530,6 @@
                             </div>
                         </button>
                     </div>
-                    
                 </form>
             </div>
         </div>
@@ -539,6 +541,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init({
+        publicKey: "user_tokKh8jORqP29P0IAM2S5",
+        });
+        })();
+    </script>
     <script src="./jquery.tagcanvas.js"></script>
     <script src="./script.js"></script>
     

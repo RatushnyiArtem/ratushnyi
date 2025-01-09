@@ -688,12 +688,12 @@ function change_logo(){
             }
         }
 
-    }, 50)
+    }, 20)
     
 });
 
-gsap.to('.preloader', 2, {
-    delay: 5,
+gsap.to('.preloader', 1, {
+    delay: 2,
     y: "-100%",
     ease: Expo.EaseInOut
 });
